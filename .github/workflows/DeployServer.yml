@@ -29,5 +29,4 @@ jobs:
         
     - name: 🟢 Start server
       run: |
-        screen -X -S LedController kill
-        screen -dmS LedController node index.js
+        ./startServer
