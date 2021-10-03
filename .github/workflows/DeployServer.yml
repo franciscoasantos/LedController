@@ -34,4 +34,7 @@ jobs:
         username: ${{ secrets.USRSERVER }}
         password: ${{ secrets.PWDSERVER }}
         port: 22
-        script: bash /home/www/LedController/startServer
+        script: |
+          screen -X -S LedController kill
+          screen -dmS LedController node /home/www/LedController/index.js
+
