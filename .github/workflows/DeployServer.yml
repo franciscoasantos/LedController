@@ -21,7 +21,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: services.franciscosantos.net
-        port: 22
+        port: 21
         server-dir: /home/www/LedController/
         local-dir: ./Server/
         username: francisco
