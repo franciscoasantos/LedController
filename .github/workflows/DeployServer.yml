@@ -23,6 +23,6 @@ jobs:
         server: services.franciscosantos.net
         port: 22
         server-dir: /home/www/LedController/
-        local-dir: ./LedController/Server/
+        local-dir: ./Server/
         username: francisco
         password: ${{ secrets.PWDFTPSERVER }}
