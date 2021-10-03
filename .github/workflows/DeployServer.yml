@@ -16,8 +16,6 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm install
-        screen -X -S LedController kill
-        screen -dmS LedController node index.js
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -28,3 +26,8 @@ jobs:
         local-dir: ./Server/
         username: francisco
         password: ${{ secrets.PWDFTPSERVER }}
+        
+    - name: 🟢 Start server
+      run: |
+        screen -X -S LedController kill
+        screen -dmS LedController node index.js
