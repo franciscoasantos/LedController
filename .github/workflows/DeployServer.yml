@@ -24,9 +24,14 @@ jobs:
         port: 21
         server-dir: /home/www/LedController/
         local-dir: ./Server/
-        username: francisco
-        password: ${{ secrets.PWDFTPSERVER }}
-        
+        username: ${{ secrets.USRSERVER }}
+        password: ${{ secrets.PWDSERVER }}
+    
     - name: 🟢 Start server
-      run: |
-        bash /home/www/LedController/startServer
+      uses: appleboy/ssh-action@master
+      with:
+        host: services.franciscosantos.net
+        username: ${{ secrets.USRSERVER }}
+        password: ${{ secrets.PWDSERVER }}
+        port: 22
+        script: bash /home/www/LedController/startServer
