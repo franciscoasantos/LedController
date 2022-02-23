@@ -36,5 +36,5 @@ jobs:
         port: 22
         script: |
           screen -X -S LedController kill
-          screen -dmS LedController node /home/www/LedController/index.js
+          screen -dmS LedController node /home/www/LedController/Node/index.js
 
