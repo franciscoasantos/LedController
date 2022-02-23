@@ -22,7 +22,7 @@ jobs:
       with:
         server: services.franciscosantos.net
         port: 21
-        server-dir: /home/www/LedController/
+        server-dir: /home/www/LedController/Node/
         local-dir: ./Server/Node/
         username: ${{ secrets.USRSERVER }}
         password: ${{ secrets.PWDSERVER }}
